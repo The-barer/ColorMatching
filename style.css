@@ -149,12 +149,14 @@ body {
 }
 .controls {
     text-align: center;
-    top: 10px;
+    top: 5vh;
     right: 50%;
     margin-right: -10vw;
     justify-content: space-between;
     display: flex;
-
+}
+.controls i {
+    font-size: 2rem;
 }
 
 .colornum, .lockbtn i{
