@@ -3,10 +3,13 @@
 * {
     border: 0;
     margin: 0;
+    padding: 0;
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    
     align-items: center;
     justify-content: center;
 }
@@ -53,11 +56,10 @@ body {
 .about ul div{
     text-align: center;
     font-weight: bold;
-    font-size: 1.5rem;
+    
 }
 .about i {
     position: absolute;
-    font-size: 1.5rem;
     right: 15px;
     top: 15px;
     padding: 1px 3px;
@@ -82,18 +84,15 @@ body {
     height: 99vh;
 }
 .lockbtn>i, .colornum{
-    font-weight: bold;
     transition: text-shadow 0.4s;
 }
+
 .colornum{
-    font-size: 2rem;
     position: relative;
 }
 .lockbtn {
     position: relative;
-    padding: 10px;
     outline: none;
-    font-size: 1.5rem;
     background: transparent;
     border-radius: 5px;
     transition: text-shadow 0.5s;
@@ -107,10 +106,13 @@ body {
     opacity: 1;
     transition: opacity 1s ease-out;
     position: absolute;
-    font-size: 1rem;
-    width: 50%;
-    top: 100%;
-    left: 25%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    width: 100%;
+    left: 0;
+    padding-top: 5px;
+    text-align: center;
 }
 .tip.hide {
     opacity: 0;
@@ -120,14 +122,53 @@ body {
     position: fixed;
     color: rgba(242,242,242,.85);
     background: transparent;
+    width: 20vw;
     top: 20px;
     right: 20px;
-    font-size: 2rem;
     text-shadow: 0 0 3px rgba(0,0,0,0.3);
     user-select: none;
+    text-align: right;
+
 }
 .fa-circle-info:hover, .fa-rotate:hover {
     text-shadow: 0 0 12px rgba(0,0,0,0.7);
     cursor: pointer;
 }
 
+@media (max-width: 800px) {
+* {
+    font-size: 1rem;
+}
+.container {
+    flex-direction: column;
+    height: 100vh;
+}
+.color {
+    flex-direction: row;
+    justify-content: space-between;
+}
+.controls {
+    text-align: center;
+    top: 10px;
+    right: 50%;
+    margin-right: -10vw;
+    justify-content: space-between;
+    display: flex;
+
+}
+
+.colornum, .lockbtn i{
+    margin: auto 10px;
+}
+.colornum .tip, .lockbtn .tip{
+    left: 100%;
+    padding: 0 10px;
+    font-size: 1rem;
+    display: inline-block;
+    width: auto;
+    height: auto;
+}
+.lockbtn .tip {
+    left: auto;
+    right: 100%;
+}}
